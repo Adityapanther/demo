@@ -1,0 +1,35 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "this is demo project",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --watch src -e js,json ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adityapanther/demo.git"
+  },
+  "keywords": [
+    "nodejs",
+    "ai",
+    "expressjs"
+  ],
+  "author": "Aditya panther",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Adityapanther/demo/issues"
+  },
+  "homepage": "https://github.com/Adityapanther/demo#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "sqlite": "^5.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.1"
+  }
+}
