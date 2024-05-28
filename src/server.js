@@ -1,11 +1,7 @@
 import express from 'express';
-import { config } from 'dotenv';
-config()
-
-config({path: `${process.env.NODE_ENV}.env`})
-console.log(process.env.PORT);
-import appConfig from './config/appConfig.js';
 import bodyParser from 'body-parser';
+import router from './routers/index.js'
+import appConfig from './config/appConfig.js';
 
 
 class Server {
@@ -19,6 +15,7 @@ class Server {
         this.app.use(bodyParser.json({
             type: 'application/*+json'
         }))
+        this.app.use(router)
     }
 
     start(){

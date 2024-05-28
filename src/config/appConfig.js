@@ -1,3 +1,5 @@
+import './dotenvConfig.js';
+
 const appConfig = {
     PORT: process.env.PORT || 5001,
     GEMINI_API_KEY : process.env.GEMINI_API_KEY || '',
