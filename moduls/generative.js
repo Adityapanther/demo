@@ -8,13 +8,12 @@ class Generative {
         this.ai = new GoogleGenerativeAI(appConfig.GEMINI_API_KEY)
     }
 
-    async sendPrompt(opportunitiesData){
+    async sendPrompt(oppoObject){
         const model = this.ai.getGenerativeModel({ model: "gemini-1.5-flash"})
-        const prompt = `add a summary filed in opportunitiesData items with summary \n
-        ${opportunitiesData.toString()}`;
+        const prompt = `could please write a summary of given opportunity \n${oppoObject.title}`;
         const result = await model.generateContent(prompt)
-        console.log(result.response.text());
-        return result.response;
+        oppoObject.summary = result.response.text()
+        return oppoObject;
     }
 
 }
